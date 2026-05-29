@@ -1,5 +1,8 @@
 package com.example;
 
+/**
+ * Пример бина с внедряемыми зависимостями.
+ */
 public class SomeBean {
     
     @AutoInjectable
@@ -8,13 +11,15 @@ public class SomeBean {
     @AutoInjectable
     private SomeOtherInterface field2;
     
+    /**
+     * Вызывает методы внедрённых зависимостей.
+     */
     public void foo() {
         field1.doSomething();
         field2.doSomeOther();
         System.out.println();
     }
 
-    // добавила геттеры для тестов
     public SomeInterface getField1() { return field1; }
     public SomeOtherInterface getField2() { return field2; }
 }
