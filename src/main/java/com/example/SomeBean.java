@@ -13,4 +13,8 @@ public class SomeBean {
         field2.doSomeOther();
         System.out.println();
     }
+
+    // добавила геттеры для тестов
+    public SomeInterface getField1() { return field1; }
+    public SomeOtherInterface getField2() { return field2; }
 }
